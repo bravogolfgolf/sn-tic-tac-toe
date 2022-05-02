@@ -1,0 +1,24 @@
+# JetBrains
+.idea/
+
+# Otrher
+.DS_Store
+node_modules
+lib
+dist
+target
+node
+node_tmp
+npm-debug.log
+*.iml
+*.tgz
+coverage
+.now-cli
+.babelrc
+/clover.xml
+/coverage-final.json
+/lcov-report/
+/lcov.info
+/dist/
+/lib/
+/target/
