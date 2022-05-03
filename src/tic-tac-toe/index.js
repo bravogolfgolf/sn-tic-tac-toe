@@ -1,1 +1,1 @@
-import './square'
+import './board'

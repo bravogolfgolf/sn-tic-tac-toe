@@ -1,5 +1,5 @@
 export default state => {
 	return (
-	 <button className="square">1</button>
+	 <button className="square">X</button>
 	);
 };

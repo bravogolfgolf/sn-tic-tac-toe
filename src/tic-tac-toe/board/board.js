@@ -1,10 +1,10 @@
 import {createCustomElement} from '@servicenow/ui-core';
 import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import view from './view'
-import styles from './square.css';
+import styles from './board.css';
 
-createCustomElement('board-square', {
+createCustomElement('game-board', {
 	renderer: {type: snabbdom},
 	view,
-	styles,
+	styles
 });
