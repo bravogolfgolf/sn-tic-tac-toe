@@ -14,6 +14,9 @@
 		"npm": ">=5.3.0"
 	},
 	"module": "src/index.js",
+	"scripts": {
+		"start": "now-cli develop --open --entry=./tic-tac-toe.js"
+	},
 	"dependencies": {
 		"@servicenow/ui-core": "quebec",
 		"@servicenow/ui-renderer-snabbdom": "quebec",
