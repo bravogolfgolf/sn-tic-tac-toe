@@ -1,14 +1,9 @@
 import {createCustomElement} from '@servicenow/ui-core';
 import snabbdom from '@servicenow/ui-renderer-snabbdom';
-import styles from './styles.scss';
+import view from './view'
+import styles from './square.css';
 
-const view = (state, {updateState}) => {
-	return (
-		<div></div>
-	);
-};
-
-createCustomElement('x-402400-tic-tac-toe', {
+createCustomElement('board-square', {
 	renderer: {type: snabbdom},
 	view,
 	styles
