@@ -1,12 +1,12 @@
 {
 	"components": {
-	    "x-402400-tic-tac-toe": {
+	    "tic-tac-toe": {
 	        "innerComponents": [],
 			"uiBuilder": {
-				"associatedTypes": ["global.core", "global.landing-page"],
-				"label": "My Component",
+				"associatedTypes": "global.core",
+				"label": "Game",
 				"icon": "document-outline",
-				"description": "A description of my component",
+				"description": "Tic-Tac-Toe",
 				"category": "primitives"
 			}
 	    }
