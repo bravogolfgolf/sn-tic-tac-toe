@@ -1,5 +1,8 @@
-export default state => {
+export default (state, {updateState}) => {
+	const {properties} = state;
 	return (
-	 <button className="square">X</button>
+		<div>
+			<button type="button" className="square">{properties.value}</button>
+		</div>
 	);
 };

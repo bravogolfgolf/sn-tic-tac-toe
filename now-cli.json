@@ -1,8 +1,6 @@
 {
   "development": {
     "proxy": {
-      "origin": "https://dev123185.service-now.com",
-      "port": 3000,
       "proxies": ["/api"]
     }
   }

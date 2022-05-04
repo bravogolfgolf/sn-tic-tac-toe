@@ -4,5 +4,5 @@ const el = document.createElement('DIV');
 document.body.appendChild(el);
 
 el.innerHTML = `
-<game-board></game-board>
+<tic-tac-toe-game></tic-tac-toe-game>
 `;

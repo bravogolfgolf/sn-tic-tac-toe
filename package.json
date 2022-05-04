@@ -15,19 +15,20 @@
 	},
 	"module": "src/index.js",
 	"scripts": {
-		"start": "now-cli develop --open --entry=./tic-tac-toe.js"
+		"develop": "now-cli develop --open",
+		"deploy": "now-cli deploy"
 	},
 	"dependencies": {
 		"@servicenow/ui-core": "quebec",
 		"@servicenow/ui-renderer-snabbdom": "quebec",
-		"@servicenow/cli-archetype": "19.0.0",
-		"@servicenow/cli-component-archetype": "19.0.0",
+		"@servicenow/cli-archetype": "21.0.7",
+		"@servicenow/cli-component-archetype": "21.0.7",
 		"@servicenow/sass-theme": "quebec",
 		"@servicenow/sass-kit": "quebec",
 		"@servicenow/library-translate": "quebec"
 	},
 	"devDependencies": {
-		"@servicenow/cli-archetype-dev": "19.0.0",
-		"@servicenow/cli-component-archetype-dev": "19.0.0"
+		"@servicenow/cli-archetype-dev": "21.0.7",
+		"@servicenow/cli-component-archetype-dev": "21.0.7"
 	}
 }

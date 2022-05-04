@@ -3,9 +3,8 @@ import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import view from './view'
 import styles from '../style.css';
 
-createCustomElement('board-square', {
+createCustomElement('tic-tac-toe-game', {
 	renderer: {type: snabbdom},
-	properties: {value: {default: null}},
 	view,
 	styles,
 });

@@ -1,9 +1,9 @@
 {
 	"components": {
-	    "tic-tac-toe": {
+	    "x-402400-tic-tac-toe": {
 	        "innerComponents": [],
 			"uiBuilder": {
-				"associatedTypes": "global.core",
+				"associatedTypes": ["global.core", "global.landing-page"],
 				"label": "Game",
 				"icon": "document-outline",
 				"description": "Tic-Tac-Toe",
@@ -11,5 +11,5 @@
 			}
 	    }
 	},
-	"scopeName": "x_402400_bgg_tic_0"
+	"scopeName": "x_402400_bgg_tic_t"
 }
