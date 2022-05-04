@@ -1,11 +1,10 @@
-export default (state, {updateState}) => {
-	const {properties} = state;
+export default ({properties: {value}}, {updateProperties}) => {
 	return (
 		<div>
-			<button type="button" className="square" on-click={() => {
-				console.log('click')
-			}}>
-				{properties.index}
+			<button type="button" className="square"
+					on-click={() => updateProperties({value: 'X'})}
+			>
+				{value}
 			</button>
 		</div>
 	);
