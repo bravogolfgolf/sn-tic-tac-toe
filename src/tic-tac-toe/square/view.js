@@ -5,7 +5,7 @@ export default (state, {updateState}) => {
 			<button type="button" className="square" on-click={() => {
 				console.log('click')
 			}}>
-				{properties.value}
+				{properties.index}
 			</button>
 		</div>
 	);

@@ -5,7 +5,7 @@ import styles from '../style.css';
 
 createCustomElement('board-square', {
 	renderer: {type: snabbdom},
-	properties: {value: {default: null}},
+	properties: {index: {default: null}},
 	view,
 	styles,
 });
