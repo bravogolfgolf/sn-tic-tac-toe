@@ -4,7 +4,7 @@
 	        "innerComponents": [],
 			"uiBuilder": {
 				"associatedTypes": ["global.core", "global.landing-page"],
-				"label": "Game",
+				"label": "Tic-Tac-Toe",
 				"icon": "document-outline",
 				"description": "Tic-Tac-Toe",
 				"category": "primitives"

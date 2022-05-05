@@ -16,7 +16,8 @@
 	"module": "src/index.js",
 	"scripts": {
 		"develop": "snc ui-component develop --open",
-		"deploy": "snc ui-component deploy"
+		"deploy": "snc ui-component deploy",
+		"deploy:force": "snc ui-component deploy --force"
 	},
 	"dependencies": {
 		"@servicenow/ui-core": "quebec",
