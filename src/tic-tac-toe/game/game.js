@@ -8,27 +8,39 @@ createCustomElement('tic-tac-toe-game', {
 		history: [{
 			squares: Array(9).fill(null)
 		}],
+		stepNumber: 0,
 		xIsNext: true,
 	},
 	actionHandlers: {
 		SQUARE_CLICKED: {
 			effect: ({action, state, updateState}) => {
-				const history = state.history;
+				const history = state.history.slice(0, state.stepNumber + 1);
 				const current = history[history.length - 1];
 				const squares = current.squares.slice();
 				if (calculateWinner(squares) || squares[action.payload.index]) {
 					return;
 				}
 				squares[action.payload.index] = state.xIsNext ? 'X' : 'O' || null;
-				updateState({history: history.concat([{squares: squares}]), xIsNext: !state.xIsNext});
+				updateState({
+					history: history.concat([{squares: squares}]),
+					stepNumber: history.length,
+					xIsNext: !state.xIsNext
+				});
 			}
 		}
 	},
 	renderer: {type: snabbdom},
-	view: (state) => {
+	view: (state, {updateState}) => {
 		const history = state.history;
-		const current = history[history.length - 1];
+		const current = history[state.stepNumber];
 		const winner = calculateWinner(current.squares);
+
+		function jumpTo(step) {
+			updateState({
+				stepNumber: step,
+				xIsNext: (step % 2) === 0,
+			});
+		}
 
 		const moves = history.map((step, move) => {
 			const desc = move ?
@@ -36,7 +48,7 @@ createCustomElement('tic-tac-toe-game', {
 				'Go to game start';
 			return (
 				<li key={move}>
-					<button onClick={() => this.jumpTo(move)}>{desc}</button>
+					<button on-click={() => jumpTo(move)}>{desc}</button>
 				</li>
 			);
 		});
