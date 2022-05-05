@@ -6,13 +6,14 @@ import styles from '../style.css';
 createCustomElement('game-board', {
 	initialState: {
 		squares: Array(9).fill(null),
+		xIsNext: true,
 	},
 	actionHandlers: {
 		SQUARE_CLICKED: {
 			effect: ({action, state, updateState}) => {
 				const squares = state.squares.slice();
-				squares[action.payload.index] = 'X';
-				updateState({squares: squares});
+				squares[action.payload.index] = state.xIsNext ? 'X' : 'O';
+				updateState({squares: squares, xIsNext: !state.xIsNext});
 			}
 		}
 	},

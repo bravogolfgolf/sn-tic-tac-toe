@@ -4,9 +4,10 @@ export default state => {
 	function renderSquare(i) {
 		return <board-square className="square" index={i} value={state.squares[i]}/>;
 	}
+	const status = 'Next player: ' + (state.xIsNext ? 'X' : 'O');
 	return (
 		<div>
-			<div className="status">Next Player: X</div>
+			<div className="status">{status}</div>
 			<div className="board-row">
 				{renderSquare(0)}
 				{renderSquare(1)}
