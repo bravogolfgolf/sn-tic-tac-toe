@@ -3,7 +3,7 @@ import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import '../board';
 import styles from '../style.scss';
 
-createCustomElement('x-402400-tic-tac-toe-game', {
+createCustomElement('x-402400-tic-tac-toe', {
 	initialState: {
 		history: [{
 			squares: Array(9).fill(null)
