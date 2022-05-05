@@ -15,8 +15,8 @@
 	},
 	"module": "src/index.js",
 	"scripts": {
-		"develop": "now-cli develop --open",
-		"deploy": "now-cli deploy"
+		"develop": "snc ui-component develop --open",
+		"deploy": "snc ui-component deploy"
 	},
 	"dependencies": {
 		"@servicenow/ui-core": "quebec",
