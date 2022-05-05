@@ -34,12 +34,11 @@ createCustomElement('tic-tac-toe-game', {
 		const history = state.history;
 		const current = history[state.stepNumber];
 		const winner = calculateWinner(current.squares);
-
-		function jumpTo(step) {
-			updateState({
-				stepNumber: step,
-				xIsNext: (step % 2) === 0,
-			});
+		let status;
+		if (winner) {
+			status = 'Winner: ' + winner;
+		} else {
+			status = 'Next player: ' + (state.xIsNext ? 'X' : 'O');
 		}
 
 		const moves = history.map((step, move) => {
@@ -53,12 +52,13 @@ createCustomElement('tic-tac-toe-game', {
 			);
 		});
 
-		let status;
-		if (winner) {
-			status = 'Winner: ' + winner;
-		} else {
-			status = 'Next player: ' + (state.xIsNext ? 'X' : 'O');
+		function jumpTo(step) {
+			updateState({
+				stepNumber: step,
+				xIsNext: (step % 2) === 0,
+			});
 		}
+
 		return (
 			<div className="game">
 				<div className="board">
