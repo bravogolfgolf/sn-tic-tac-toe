@@ -1,8 +1,10 @@
-export default ({properties: {value}}, {updateProperties}) => {
+export default ({properties: {index, value}}, {dispatch}) => {
 	return (
 		<div>
 			<button type="button" className="square"
-					on-click={() => updateProperties({value: 'X'})}
+					on-click={() => {
+						dispatch('SQUARE_CLICKED', {index: index});
+					}}
 			>
 				{value}
 			</button>

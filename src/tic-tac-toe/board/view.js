@@ -2,7 +2,7 @@ import '../square'
 
 export default state => {
 	function renderSquare(i) {
-		return <board-square className="square" index={i}/>;
+		return <board-square className="square" index={i} value={state.properties.squares[i]}/>;
 	}
 	return (
 		<div>
