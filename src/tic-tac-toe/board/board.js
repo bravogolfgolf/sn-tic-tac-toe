@@ -1,7 +1,7 @@
 import {createCustomElement} from '@servicenow/ui-core';
 import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import '../square'
-import styles from '../style.css';
+import styles from '../style.scss';
 
 createCustomElement('game-board', {
 	properties: {

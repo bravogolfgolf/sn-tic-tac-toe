@@ -1,7 +1,7 @@
 import {createCustomElement} from '@servicenow/ui-core';
 import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import '../board';
-import styles from '../style.css';
+import styles from '../style.scss';
 
 createCustomElement('tic-tac-toe-game', {
 	initialState: {
