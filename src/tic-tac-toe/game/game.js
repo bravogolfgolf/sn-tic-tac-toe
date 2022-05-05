@@ -47,7 +47,7 @@ createCustomElement('tic-tac-toe-game', {
 				'Go to move #' + move :
 				'Go to game start';
 			return (
-				<li key={move}>
+				<li>
 					<button on-click={() => jumpTo(move)}>{desc}</button>
 				</li>
 			);
