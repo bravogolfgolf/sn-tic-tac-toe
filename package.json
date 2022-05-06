@@ -17,7 +17,7 @@
 	"scripts": {
 		"develop": "snc ui-component develop --open --port 8082",
 		"deploy": "snc ui-component deploy",
-		"deploy:force": "snc ui-component deploy --force",
+		"deploy:force": "snc ui-component deploy --force"
 	},
 	"dependencies": {
 		"@servicenow/cli-archetype": "21.0.7",
